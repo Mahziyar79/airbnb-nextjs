@@ -34,18 +34,30 @@ function Search() {
           </div>
 
           <div className="flex flex-col">
-          {searchResults?.map((item) => (
-            <InfoCard
-              key={item.id}
-              img={item.img}
-              location={item.location}
-              title={item.title}
-              description={item.description}
-              star={item.star}
-              price={item.price}
-              total={item.total}
-            />
-          ))}
+            {searchResults?.map((item) => (
+              <InfoCard
+                key={item.id}
+                img={item.img}
+                location={item.location}
+                title={item.title}
+                description={item.description}
+                star={item.star}
+                price={item.price}
+                total={item.total}
+              />
+            ))}
+          </div>
+        </section>
+        <section>
+          <div className="hidden lg:inline-flex h-full">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.182370726!2d-0.10159865000000001!3d51.52864165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2snl!4v1668104260305!5m2!1sen!2snl"
+              width="600"
+              height="100%"
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </section>
       </main>
